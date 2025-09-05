@@ -10,7 +10,7 @@ export const FatherOccupation = {
   },
 
   getAll: async () => {
-    const [rows] = await db.query('SELECT * FROM m_fatheroccupation ORDER BY id DESC');
+    const [rows] = await db.query('SELECT * FROM m_fatheroccupation ORDER BY id ASC');
     return rows;
   },
 
