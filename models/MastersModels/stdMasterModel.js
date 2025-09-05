@@ -10,7 +10,7 @@ export const StdMaster = {
   },
 
   getAll: async () => {
-    const [rows] = await db.query('SELECT * FROM std_master ORDER BY id DESC');
+    const [rows] = await db.query('SELECT * FROM std_master ORDER BY id ASC');
     return rows;
   },
 

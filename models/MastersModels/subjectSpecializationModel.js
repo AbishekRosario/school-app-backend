@@ -10,7 +10,7 @@ export const SubjectSpecialization = {
   },
 
   getAll: async () => {
-    const [rows] = await db.query('SELECT * FROM subject_specialization ORDER BY id DESC');
+    const [rows] = await db.query('SELECT * FROM subject_specialization ORDER BY id ASC');
     return rows;
   },
 
