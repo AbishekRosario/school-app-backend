@@ -10,7 +10,7 @@ export const BloodGroup = {
   },
 
   getAll: async () => {
-    const [rows] = await db.query('SELECT * FROM m_bloodgroup ORDER BY id DESC');
+    const [rows] = await db.query('SELECT * FROM m_bloodgroup ORDER BY id ASC');
     return rows;
   },
 

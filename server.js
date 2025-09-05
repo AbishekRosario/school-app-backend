@@ -10,6 +10,11 @@ import fatherOccupationRoutes from './routes/MastersRoutes/fatherOccupationRoute
 import stdMasterRoutes from './routes/MastersRoutes/stdMasterRoutes.js'
 import subjectSpecializationRoutes from './routes/MastersRoutes/subjectSpecializationRoutes.js';
 import qualificationRoutes from './routes/MastersRoutes/qualificationRoutes.js';
+import sectionRoutes from './routes/MastersRoutes/sectionRoutes.js';
+import religionRoutes from './routes/MastersRoutes/religionRoutes.js';
+import casteRoutes from "./routes/MastersRoutes/casteRoutes.js";
+import documentTypeRoutes from "./routes/MastersRoutes/documentTypeRoutes.js";
+import statusRoutes from "./routes/MastersRoutes/statusRoutes.js";
 
 import dropdownRoutes from './routes/DropdownRoutes/dropdownRoutes.js';
 
@@ -43,6 +48,13 @@ app.use('/api/fatheroccupations', fatherOccupationRoutes);
 app.use('/api/stdmaster', stdMasterRoutes);
 app.use('/api/subjectspecialization', subjectSpecializationRoutes);
 app.use('/api/qualification', qualificationRoutes);
+app.use('/api/sections', sectionRoutes);
+app.use('/api/religions', religionRoutes);
+app.use("/api/castes", casteRoutes);
+app.use("/api/document-types", documentTypeRoutes);
+app.use("/api/statuses", statusRoutes);
+
+
 
 app.use('/api/dropdowns', dropdownRoutes);
 
