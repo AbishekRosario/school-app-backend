@@ -15,6 +15,8 @@ import religionRoutes from './routes/MastersRoutes/religionRoutes.js';
 import casteRoutes from "./routes/MastersRoutes/casteRoutes.js";
 import documentTypeRoutes from "./routes/MastersRoutes/documentTypeRoutes.js";
 import statusRoutes from "./routes/MastersRoutes/statusRoutes.js";
+import admissionCategoryRoutes from "./routes/MastersRoutes/admissionCategoryRoutes.js";
+import studentRoutes from './routes/Students_InfoRoutes/Students_InfoRoutes.js';
 
 import dropdownRoutes from './routes/DropdownRoutes/dropdownRoutes.js';
 
@@ -53,8 +55,8 @@ app.use('/api/religions', religionRoutes);
 app.use("/api/castes", casteRoutes);
 app.use("/api/document-types", documentTypeRoutes);
 app.use("/api/statuses", statusRoutes);
-
-
+app.use("/api/admission-categories", admissionCategoryRoutes);
+app.use('/api/students', studentRoutes);
 
 app.use('/api/dropdowns', dropdownRoutes);
 

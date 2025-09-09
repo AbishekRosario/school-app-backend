@@ -3,7 +3,7 @@ import crypto from 'crypto';
 
 export const generateTokens = (payload) => {
   const accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: '15m',
+    expiresIn: '1d',
   });
   const refreshToken = jwt.sign({ id: payload.id, role: payload.role }, process.env.REFRESH_TOKEN_SECRET, {
     expiresIn: '7d',
@@ -15,4 +15,13 @@ export const generateVerificationToken = () => {
   const token = crypto.randomBytes(32).toString('hex');
   const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24h
   return { token, expiresAt };
+};
+
+// ADD THIS FUNCTION - you were missing verifyToken export
+export const verifyToken = (token, secret = process.env.ACCESS_TOKEN_SECRET) => {
+  try {
+    return jwt.verify(token, secret);
+  } catch (error) {
+    throw new Error('Invalid or expired token');
+  }
 };

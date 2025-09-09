@@ -10,7 +10,7 @@ export class DocumentType {
   }
 
   static async getAll() {
-    const [rows] = await db.query("SELECT * FROM m_document_types ORDER BY id DESC");
+    const [rows] = await db.query("SELECT * FROM m_document_types ORDER BY id ASC");
     return rows;
   }
 
